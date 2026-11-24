@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>今日份 · 今天吃什么 · 动多少 · 花多少</title>
+<meta name="theme-color" content="#FFC93C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="今日份">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- 左侧模块导航 -->
+  <aside class="rail">
+    <div class="rail-logo"><img src="icons/icon-192.png" alt="今日份"></div>
+    <nav class="rail-nav">
+      <button data-tab="today" class="active"><span class="ri">☀️</span><span class="rl">今天</span></button>
+      <button data-tab="week"><span class="ri">🗓️</span><span class="rl">一周</span></button>
+      <button data-tab="blind"><span class="ri">🎁</span><span class="rl">盲盒</span></button>
+      <button data-tab="classify"><span class="ri">📂</span><span class="rl">分类</span></button>
+      <button data-tab="recipes"><span class="ri">📖</span><span class="rl">菜谱</span></button>
+      <button data-tab="shopping"><span class="ri">🛒</span><span class="rl">买菜</span></button>
+      <button data-tab="fridge"><span class="ri">🧊</span><span class="rl">冰箱</span><span class="rail-dot" hidden></span></button>
+      <button data-tab="stats"><span class="ri">📈</span><span class="rl">数据</span></button>
+    </nav>
+  </aside>
+
+  <div class="content-wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="icons/icon-192.png" alt="今日份">
+        <div>
+          <h1>今日份</h1>
+          <p>今天吃什么 · 动多少 · 花多少</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="view"></main>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/app2.js"></script>
+<script src="vendor/tesseract/tesseract.min.js"></script>
+<script src="js/ocr.js"></script>
+<script src="js/app3.js"></script>
+</body>
+</html>
+
+
